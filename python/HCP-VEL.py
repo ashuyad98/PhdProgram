@@ -1,3 +1,5 @@
+#This programe is to direction dependent velocity
+
 import math
 
 def main():
