@@ -29,7 +29,7 @@ def main():
     
     v1.append((c33*q+c11*p+c44+u)/2)
     v2.append((c33*q+c11*p+c44-u)/2)
-    v3.append.((c44*q+((c11-c12)/2.0)*p))
+    v3.append((c44*q+((c11-c12)/2.0)*p))
     
   print("Table of velocity for hcp compound-""\n")         
   print("Compound name="+ comp +"\n")
