@@ -31,14 +31,21 @@ def main():
     v2.append((c33*q+c11*p+c44-u)/2)
     v3.append.((c44*q+((c11-c12)/2.0)*p))
     
-    print("Table of velocity for hcp compound-""\n")         
-    print("Compound name="<<comp<<"\n")
+  print("Table of velocity for hcp compound-""\n")         
+  print("Compound name="+ comp +"\n")
 
-cout<<"----------------------------------------------------------""\n";
- cout<<"theeta""\t\t""v1 " "\t\t"<<"v2 " "\t\t"<<"v3 " "\n";
- cout<<"----------------------------------------------------------""\n";
-    
+  print("----------------------------------------------------------\n")
+  print("theeta\t\tv1  \t\tv2  \t\tv3  \n")
+  print("----------------------------------------------------------\n")
   
+  for tthValue, v1Value, v2Value, v3Value in zip(tth, v1, v2, v3):
+    
+    print(tthValue + "\t" + v1Value + "\t" + v2Value + "\t" + v3Value + "\n")
+  
+  println("----------------------------------------------------------")
+
+
+    
 if __name__ == "__main__":
   
     main()
