@@ -5,7 +5,7 @@ def main():
   name = input("Enter your name: ")
   
   # Output
-  print("Hello, " + name)
+  print("Hello, " + name, end = " ")
   
   # taking three inputs at a time
   x, y, z = input("Enter a three value: ").split()
