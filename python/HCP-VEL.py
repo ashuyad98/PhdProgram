@@ -40,7 +40,7 @@ def main():
   
   for tthValue, v1Value, v2Value, v3Value in zip(tth, v1, v2, v3):
     
-    print(tthValue + "\t" + v1Value + "\t" + v2Value + "\t" + v3Value + "\n")
+    print("{}\t{}\t{}\t{}\n".format(tthValue, v1Value, v2Value, v3Value))
   
   println("----------------------------------------------------------")
 
