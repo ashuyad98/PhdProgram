@@ -8,11 +8,11 @@ def main():
   tth = [0.0, 5.0, 15.0, 25.0, 35.0, 45.0, 55.0, 65.0, 75.0, 85.0, 90.0]
   
   comp = input(" Enter the compound's name = ")
-  c11 = input(" Enter the value of c11 =  ")
-  c12 = input(" Enter the value of c12 =  ")
-  c13 = input(" Enter the value of c13 =  ")
-  c33 = input(" Enter the value of c33 =  ")
-  c44 = input(" Enter the value of c44 =  ")
+  c11 = float(input(" Enter the value of c11 =  "))
+  c12 = float(input(" Enter the value of c12 =  "))
+  c13 = float(input(" Enter the value of c13 =  "))
+  c33 = float(input(" Enter the value of c33 =  "))
+  c44 = float(input(" Enter the value of c44 =  "))
   
   for tthValue in tth:
     
