@@ -1,2 +1,2 @@
 # PhdProgram
-Python code to find solid related properties
+Python code to find various solid related properties
