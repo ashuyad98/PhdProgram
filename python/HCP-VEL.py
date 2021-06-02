@@ -1,5 +1,4 @@
 import math
-from tabulate import tabulate
 
 def main():
       
@@ -13,6 +12,7 @@ def main():
   c13 = float(input(" Enter the value of c13 =  "))
   c33 = float(input(" Enter the value of c33 =  "))
   c44 = float(input(" Enter the value of c44 =  "))
+  print()
   
   for tthValue in tth:
     
@@ -31,19 +31,17 @@ def main():
     v2.append((c33*q+c11*p+c44-u)/2)
     v3.append((c44*q+((c11-c12)/2.0)*p))
     
-  print("Table of velocity for hcp compound-\n")         
-  print("Compound name="+ comp +"\n")
+  print("Table of velocity for hcp compound-")         
+  print("Compound name="+ comp+"\n")
 
-  print("----------------------------------------------------------\n")
-  print("theeta\t\tv1  \t\tv2  \t\tv3  \n")
-  
-  #for tthValue, v1Value, v2Value, v3Value in zip(tth, v1, v2, v3):
+  print("{:<18} {:<18} {:<18} {:<18}".format("Theeta", "v1", "v2", "v3"))
+  print("{:<18} {:<18} {:<18} {:<18}".format("---------", "---------", "---------", "---------"))
+ 
+  for tthValue, v1Value, v2Value, v3Value in zip(tth, v1, v2, v3):
     
-    #print("{}\t{}\t{}\t{}".format(tthValue, v1Value, v2Value, v3Value))
+    print("{:<18} {:<18.10f} {:<18.10f} {:<18.10f}".format(tthValue, v1Value, v2Value, v3Value))
   
-  print(tabulate(zip(tth, v1, v2, v3), headers=['theeta', 'v1', 'v2', 'v3']))
-  print("----------------------------------------------------------")
-
+  print()
 
     
 if __name__ == "__main__":
