@@ -18,6 +18,8 @@ def main():
   #Define multiple variables
   double c1, c2, c3, c4= 5
   
+  #Define multiple list
+  alist, blist, clist, dlist, elist = ([] for i in range(5))
   
 if __name__ == "__main__":
   
