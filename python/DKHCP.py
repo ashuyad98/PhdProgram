@@ -160,9 +160,76 @@ def main():
       all[i][ii]=al[i]*pow(FF[ii],2.0)
       als[i][ii]=as[i]*pow(FF[ii],2.0)
   
-  J
-     
-   
+  
+  while(1):
+    print(" Enter 1 to see elastic constants""\n")
+    print(" Enter 2 to see Cv,Eo,density,thermalconductivity""\n")
+    print(" Enter 3 to see vel and relaxtion time""\n")
+    print(" Enter 4 to see gruneisen const. and DL, DS values""\n")
+    print(" Enter 5 to see temp. depend. attenuation values""\n")
+    print(" Enter 6 to see frequency depencent attenuation values""\n")
+    print(" Enter 7 to Print all data""\n")
+    print(" Enter 8 for EXIT""\n")
+    print(" What is your choice=")
+    
+    J = input()
+    match J:
+      case '1':
+        print("This result is for HCP compound="+comp)
+        print("----------------------------------------------------------")
+        print("Temp""\t\t""a""\t\t""c/a ""\n")
+        print("----------------------------------------------------------")
+        for i in range(j):
+          print(""+T[i]+"\t"+a[i]+"\t"+""+p[i])
+        print("----------------------------------------------------------")
+        print(" This is table for second order elastic constant. ")
+        print("----------------------------------------------------------")
+        print("temp""\t""c11""\t\t""c12 " "\t\t"+"c13 " "\n")
+        print("----------------------------------------------------------")
+        for in in range(j):
+          print(""+T[i]+"\t"+c11[i]+"\t"+""+c12[i]+"\t"+""+c13[i])
+        print("----------------------------------------------------------")
+        print("temp""c33""\t\t""c44 " "\t\t"+"c66 ")
+        print("----------------------------------------------------------")
+        for i in range(j):
+          print(""<<T[i]<<"\t"<<c33[i]<<"\t"<<""<<c44[i]<<"\t"<<""<<c66[i])
+        print("----------------------------------------------------------")
+        print(" This is table for third order elastic constant. ")
+        print("----------------------------------------------------------")
+        print("temp""c111""\t\t""c112 " "\t\t"+"c113 " "\t\t"+"C123 ")
+        print("----------------------------------------------------------")
+        for i in range(j):
+          print(""+T[i]+"\t"+c111[i]+"\t"+c112[i]+"\t"+c113[i]+"\t"+c123[i])
+        print("----------------------------------------------------------")
+        print("temp""c133""\t\t""c344 " "\t\t"+"c144 ")
+        print("----------------------------------------------------------")
+        for i in range(j):
+          print(""+T[i]+"\t"+c133[i]+"\t"+c344[i]+"\t"+c144[i])
+        print("----------------------------------------------------------")
+        print("temp""c155""\t\t""c222 " "\t\t""c333 ")
+        print("----------------------------------------------------------")
+        print(""+T[i]+"\t"+c155[i]+"\t"+c222[i]+"\t"+c333[i])
+        print("----------------------------------------------------------")
+      
+      case '2':
+        print("This is table for Cv,Eo,Density and thermal cond.""\n")
+        print("----------------------------------------------------------""\n")
+        print("temp""\t""density""\t""Cv""\t""E0""\t""K""\n")
+        print("----------------------------------------------------------""\n")
+        for i in range(j):
+          print(""+T[i]+"\t"+dd[i]+"\t"+Cv[i]+"\t"+Eo[i]+"\t"+ko[i])
+        print("----------------------------------------------------------")
+      case '3':
+        print(" This is table for velocity. ")
+        print("----------------------------------------------------------")
+        print("Temp.""\t\t""Vl""\t\t""Vs")
+        print("----------------------------------------------------------")
+        for i in range(j):
+          print(""+T[i]+"\t"+""<<Vl[i]+"\t"+""+Vs[i])
+        print("----------------------------------------------------------")
+        print(" This is table for debye avg.velocity and relax. time. ")
+        print("----------------------------------------------------------")
+        
     
 if __name__ == "__main__":
   
