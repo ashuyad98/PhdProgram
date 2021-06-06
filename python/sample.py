@@ -5,7 +5,7 @@ def main():
   name = input("Enter your name: ")
   
   # Output
-  print("Hello, " + name, end = " ")
+  print("Hello, " + name)
   
   # taking three inputs at a time
   x, y, z = input("Enter a three value: ").split()
@@ -16,7 +16,7 @@ def main():
 
   
   #Define multiple variables
-  double c1, c2, c3, c4= 5
+  c1, c2, c3, c4  = 0, 0, 0, 0
   
   #Define multiple list
   alist, blist, clist, dlist, elist = ([] for i in range(5))
