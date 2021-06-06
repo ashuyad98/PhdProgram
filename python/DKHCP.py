@@ -230,7 +230,56 @@ def main():
         print(" This is table for debye avg.velocity and relax. time. ")
         print("----------------------------------------------------------")
         
-    
+        print("Temp.""\t\t""V""\t\t""Relax. time")
+        print("----------------------------------------------------------")
+        for i in range(j):
+          print(""+T[i]+"\t"+""+V[i]+"\t"+""+to[i]+"\n")
+        print("----------------------------------------------------------")
+      
+      case 4:
+        print("Value of Gruneisen contants are as follow:-")
+        print("Along Z-axis for lonitudinal wave")
+        print("Average of Gamma=xav1")
+        print("Average of square Gamma=x")
+        print("Square of average Gamma=xav")
+        print("----------------------------------------------------------""\n")
+        print("Temp.""\t""xav1""\t\t""xav""\t""x""\t\t""DL""\n")
+        print("----------------------------------------------------------""\n")
+        for i in range(j):
+          print(""+T[i]+"\t"+xav1[i]+"\t"+xav[i]+"\t"+x[i]+"\t"+Dl[i]+"\n")
+        print("----------------------------------------------------------""\n")
+        print("Along Z-axis for shear wave""\n")
+        print("Average of Gamma =yav1""\n")
+        print("Average of square Gamma=y""\n")
+        print("Square of average Gamma=yav""\n")
+        print("----------------------------------------------------------""\n")
+        print("Temp.""\t""yav1""\t\t""y""\t""Ds""\n")
+        print("----------------------------------------------------------""\n")
+        for i in range(j):
+          print(""+T[i]+"\t"+yav1[i]+"\t"+y[i]+"\t"+Ds[i]+"\n")
+      
+        print("----------------------------------------------------------""\n")
+      case 5:
+        print("Table of ultrasonic attenuation:-""\n\n")
+        print("Compound name="+comp+"\n\n")
+      
+        print("----------------------------------------------------------""\n")
+        print("temp""\t""alpha(th)""\t""alpha(L)""\t""alpha(s)" "\n")
+        print("----------------------------------------------------------""\n")
+        for i in range(j):
+          print(""+T[i]+"\t"+ath[i]+"\t"+al[i]+"\t"+as[i]+"\n")
+        print("----------------------------------------------------------""\n")
+      
+      case 6:
+        for i in range(j):
+          print("At the temperature="+T[i]+"\n")
+          print("----------------------------------------------------------""\n")
+          print("frequency""\t""alpha(th)""\t""alpha(L)""\t""alpha(s)" "\n")
+          print("----------------------------------------------------------""\n")
+          for ii in range(jj):
+      	  print(""+F[ii]+"\t"+alth[i][ii]+"\t"+all[i][ii]+"\t"+als[i][ii]+"\n")
+          print("----------------------------------------------------------""\n")
+          
 if __name__ == "__main__":
   
     main()
