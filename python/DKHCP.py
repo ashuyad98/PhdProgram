@@ -157,8 +157,10 @@ def main():
   for i in range(j):
     for ii in range(jj):
       alth[i][ii]=ath[i]*pow(FF[ii],2.0)
-		  all[i][ii]=al[i]*pow(FF[ii],2.0)
-		  als[i][ii]=as[i]*pow(FF[ii],2.0)
+      all[i][ii]=al[i]*pow(FF[ii],2.0)
+      als[i][ii]=as[i]*pow(FF[ii],2.0)
+  
+  J
      
    
     
