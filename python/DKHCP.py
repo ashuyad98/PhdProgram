@@ -138,8 +138,8 @@ def main():
     yav[i]=pow(yav1[i],2.0)
     
     #calculation of attenuation
-    Vl[i]=sqrt(c33[i]/dd[i])
-    Vs[i]=sqrt(c44[i]/dd[i])
+    Vl[i]=math.sqrt(c33[i]/dd[i])
+    Vs[i]=math.sqrt(c44[i]/dd[i])
     V[i]=pow(3,0.333)*pow((1/pow(Vl[i],3)+2/pow(Vs[i],3)),-0.333)
     Cv[i]=Cva[i]*pow(10,Cvb[i])
     Eo[i]=Eoa[i]*pow(10,Eob[i])
@@ -284,7 +284,7 @@ def main():
         print("----------------------------------------------------------""\n")
     
     elif J == '7':
-      file1 = open("MyFile.txt", "w")
+      file1 = open("PRN", "w")
       file1.append("Compound name="+comp+"\n\n")
       file1.append("This result is for HCP compound="+comp+"\n")
       file1.append("----------------------------------------------------------""\n")
