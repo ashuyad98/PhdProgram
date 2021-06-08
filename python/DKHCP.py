@@ -17,7 +17,7 @@ def main():
   A,C,L,M,K,x1,x2,x3,x4,x5,x6,x6a,x6b,x7,x8,x8a,x8b,x8c,x,xav,xav1,AC,XX,y1a,y1,y2,y3a,y3,y4,y5a,y5,y6,y7a,y7,y8,y9,y10,y,yav,yav1 = ([0.0 for x in range(15)] for i in range(40))
   
   #Variables to calculate ultrasonic attenuation.
-  T = []
+  T = [0.0 for x in range(15)]
   dd, Vl, Vs, V, Cv, Cva, Cvb ,Eo, Eoa, Eob, ko, koa, kob, to, tl, ts, Dl, Ds, ath, al, as1 = ([0.0 for x in range(15)] for i in range(21))
   
   #variables for frequency dependent
@@ -38,6 +38,10 @@ def main():
   print("Enter the value of C33 =  ")
   for i in range(j):
     C33[i], C33A[i] = (float(k) for k in (input().split()))
+
+  print("enter the value of dd= ")
+  for i in range(j):
+    dd[i] = (float(input()))
 
   print("enter the temperature= ")
   for i in range(j):
@@ -172,7 +176,7 @@ def main():
     print(" Enter 6 to see frequency depencent attenuation values""\n")
     print(" Enter 7 to Print all data""\n")
     print(" Enter 8 for EXIT""\n")
-    print(" What is your choice=")
+    print(" What is your choice= ")
     
     J = input()
     if J ==  '1':
@@ -227,7 +231,7 @@ def main():
       print("Temp.""\t\t""Vl""\t\t""Vs")
       print("----------------------------------------------------------")
       for i in range(j):
-        print(""+str(T[i])+"\t"+""str(Vl[i])+"\t"+""+str(Vs[i]))
+        print(""+str(T[i])+"\t"+""+str(Vl[i])+"\t"+""+str(Vs[i]))
       print("----------------------------------------------------------")
       print(" This is table for debye avg.velocity and relax. time. ")
       print("----------------------------------------------------------")
