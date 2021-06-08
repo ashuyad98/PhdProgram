@@ -10,18 +10,18 @@ def main():
   #k2 is contants calculated by C33.
   #k3 is contants calculated by k2,a,m,n. 
   m, n = 1.0, 2.0
-  a, a0, p, va, C33, C33A, k2, k3 = ([0 for x in range(15)] for i in range(8))
-  c11, c12, c13, c33, c44, c66, c111, c112, c113, c123, c133, c344, c144, c155, c222, c333 = ([0 for x in range(15)] for i in range(16))
+  a, a0, p, va, C33, C33A, k2, k3 = ([0.0 for x in range(15)] for i in range(8))
+  c11, c12, c13, c33, c44, c66, c111, c112, c113, c123, c133, c344, c144, c155, c222, c333 = ([0.0 for x in range(15)] for i in range(16))
   
   #variables to calculate gruneisen constants.
-  A,C,L,M,K,x1,x2,x3,x4,x5,x6,x6a,x6b,x7,x8,x8a,x8b,x8c,x,xav,xav1,AC,XX,y1a,y1,y2,y3a,y3,y4,y5a,y5,y6,y7a,y7,y8,y9,y10,y,yav,yav1 = ([0 for x in range(15)] for i in range(40))
+  A,C,L,M,K,x1,x2,x3,x4,x5,x6,x6a,x6b,x7,x8,x8a,x8b,x8c,x,xav,xav1,AC,XX,y1a,y1,y2,y3a,y3,y4,y5a,y5,y6,y7a,y7,y8,y9,y10,y,yav,yav1 = ([0.0 for x in range(15)] for i in range(40))
   
   #Variables to calculate ultrasonic attenuation.
   T = []
-  dd, Vl, Vs, V, Cv, Cva, Cvb ,Eo, Eoa, Eob, ko, koa, kob, to, tl, ts, Dl, Ds, ath, al, as1 = ([0 for x in range(15)] for i in range(21))
+  dd, Vl, Vs, V, Cv, Cva, Cvb ,Eo, Eoa, Eob, ko, koa, kob, to, tl, ts, Dl, Ds, ath, al, as1 = ([0.0 for x in range(15)] for i in range(21))
   
   #variables for frequency dependent
-  alth, all, als = ([[0 for x in range(15)] for y in range(15)] for i in range(3))
+  alth, all, als = ([[0.0 for x in range(15)] for y in range(15)] for i in range(3))
   F,FF = ([0 for x in range(15)] for i in range(2))
   
   comp = input(" Enter the compound's name = ")
