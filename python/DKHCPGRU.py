@@ -132,20 +132,20 @@ def main():
   y8=(pow(AC,0.5)/(A+C))*(1+y7a)
   y9=-(1.0/1.414)*(pow(AC,0.5)/(A+C))*(1+y7a)
   y10=(1.0/1.414)*(pow(AC,0.5)/(A+C))*(1+y7a)
-  y=(y1*y1+y2*y2+y3*y3+y4*y4+y5*y5+y6*y6+y7*y7+y8*y8+y9*y9+
-  y10*y10)/16.0
+  y=(y1*y1+y2*y2+y3*y3+y4*y4+y5*y5+y6*y6+y7*y7+y8*y8+y9*y9+y10*y10)/16.0
   yav1=(y1+y2+y3+y4+y5+y6+y7+y8+y9+y10)/16.0
   yav=pow(yav1,2.0)
 
   #calculation of attenuation
-  Vl=sqrt(c33/dd) 
-  Vs=sqrt(c44/dd)
+  Vl=math.sqrt(c33/dd) 
+  Vs=math.sqrt(c44/dd)
   V=pow(3,0.333)*pow((1/pow(Vl,3)+2/pow(Vs,3)),-0.333)
   Cv=Cva*pow(10,Cvb)
   Eo=Eoa*pow(10,Eob)
   ko=koa*pow(10,kob)
   to=3*ko/(Cv*V*V)
-  tl=2*to ts=to
+  tl=2*to 
+  ts=to
   Dl=9*x-( (3*xav*Cv*T)/Eo)
   Ds=9*y
   ath=(4.0*3.14*3.14*xav*ko*T)/(2*dd*pow(Vl,5))
@@ -175,23 +175,23 @@ def main():
       print("theeta""\t\t""v1 " "\t\t"+"v2 " "\t\t"+"v3 " "\n";
       print("----------------------------------------------------------""\n";
       for i in range(11):
-        print(""+tth[i]+"\t"+""+v1[i]+"\t"+""+v2[i]+"\t"+""+v3[i]+"\n";
+        print(""+str(tth[i])+"\t"+""+str(v1[i])+"\t"+""+str(v2[i])+"\t"+""+str(v3[i])+"\n";
       print("----------------------------------------------------------""\n";
     elif J == 2:
-	  print("Value of relaxation time="+to+"\n\n";
-	  print("Value of long.relax.time="+tl+"\n\n";
-	  print("Value of shearrelax.time="+ts+"\n\n";
+	  print("Value of relaxation time="+str(to)+"\n\n";
+	  print("Value of long.relax.time="+str(tl)+"\n\n";
+	  print("Value of shearrelax.time="+str(ts)+"\n\n";
 	  print("Value of Gruneisen contants are as follow:-""\n";
 	  print("Along Z-axis for lonitudinal wave""\n";
-	  print("Average of Gamma="+xav1+"\n\n";
-	  print("Average of square Gamma="+x+"\n\n";
-	  print("Square of average Gamma="+xav+"\n\n";
-	  print("DL="+Dl+"\n\n";
+	  print("Average of Gamma="+str(xav1)+"\n\n";
+	  print("Average of square Gamma="+str(x)+"\n\n";
+	  print("Square of average Gamma="+str(xav)+"\n\n";
+	  print("DL="+str(Dl)+"\n\n";
 	  print("Along Z-axis for shear wave""\n";
-	  print("Average of Gamma="+yav1+"\n\n";
-	  print("Average of square Gamma="+y+"\n\n";
-	  print("Square of average Gamma="+yav+"\n\n";
-	  print("Ds="+Ds+"\n\n";
+	  print("Average of Gamma="+str(yav1)+"\n\n";
+	  print("Average of square Gamma="+str(y)+"\n\n";
+	  print("Square of average Gamma="+str(yav)+"\n\n";
+	  print("Ds="+str(Ds)+"\n\n";
     elif J == 3:
       print("Table of ultrasonic attenuation:-""\n\n";
       print("Compound name="+comp+"\n\n";
@@ -199,56 +199,56 @@ def main():
       print("frequency""\t""alpha(th)""\t""alpha(L)""\t""alpha(s)" "\n";
       print("----------------------------------------------------------""\n";
       for j in range(m):
-        print(""+f[j]+"\t"+""+athw[j]+"\t"""+alw[j]+"\t"""+asw[j]+"\n";
+        print(""+str(f[j])+"\t"+""+str(athw[j])+"\t"""+str(alw[j])+"\t"""+str(asw[j])+"\n";
       print("----------------------------------------------------------""\n";
     elif J == 4:
-	  file1 = open("PRN", "w")
-      file1.append("Compound name="+comp+"\n\n")
-      file1.append("c11="+c11+"\n\n")
-      file1.append("c12="+c12+"\n\n")
-      file1.append("c13="+c13+"\n\n")
-      file1.append("c33="+c33+"\n\n")
-      file1.append("c44="+c44+"\n\n")
-      file1.append("c66="+c66+"\n\n")
-      file1.append("c111="+c111+"\n\n")
-      file1.append("c112="+c112+"\n\n")
-      file1.append("c113="+c113+"\n\n")
-      file1.append("c123="+c123+"\n\n")
-      file1.append("c133="+c133+"\n\n")
-      file1.append("c144="+c144+"\n\n")
-      file1.append("c155="+c155+"\n\n")
-      file1.append("c222="+c222+"\n\n")
-      file1.append("c333="+c333+"\n\n")
-      file1.append("c344="+c344+"\n\n")
-      file1.append("Table of velocity for hcp compound-""\n\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("theeta""\t\t""v1 " "\t\t"+"v2 " "\t\t"+"v3 " "\n")
-      file1.append("----------------------------------------------------------""\n")
+	  file1 = open("PRN", "a")
+      file1.write("Compound name="+comp+"\n\n")
+      file1.write("c11="+str(c11)+"\n\n")
+      file1.write("c12="+str(c12)+"\n\n")
+      file1.write("c13="+str(c13)+"\n\n")
+      file1.write("c33="+str(c33)+"\n\n")
+      file1.write("c44="+str(c44)+"\n\n")
+      file1.write("c66="+str(c66)+"\n\n")
+      file1.write("c111="+str(c111)+"\n\n")
+      file1.write("c112="+str(c112)+"\n\n")
+      file1.write("c113="+str(c113)+"\n\n")
+      file1.write("c123="+str(c123)+"\n\n")
+      file1.write("c133="+str(c133)+"\n\n")
+      file1.write("c144="+str(c144)+"\n\n")
+      file1.write("c155="+str(c155)+"\n\n")
+      file1.write("c222="+str(c222)+"\n\n")
+      file1.write("c333="+str(c333)+"\n\n")
+      file1.write("c344="+str(c344)+"\n\n")
+      file1.write("Table of velocity for hcp compound-""\n\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("theeta""\t\t""v1 " "\t\t"+"v2 " "\t\t"+"v3 " "\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(11):
-        file1.append(""+tth[i]+"\t"+""+v1[i]+"\t"+""+v2[i]+"\t"+""+v3[i]+"\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Value of relaxation time="+to+"\n\n")
-      file1.append("Value of long.relax.time="+tl+"\n\n")
-      file1.append("Value of shearrelax.time="+ts+"\n\n")
-      file1.append("Value of Gruneisen contants are as follow:-""\n")
-      file1.append("Along Z-axis for lonitudinal wave""\n")
-      file1.append("Average of Gamma="+xav1+"\n\n")
-      file1.append("Average of square Gamma="+x+"\n\n")
-      file1.append("Square of average Gamma="+xav+"\n\n")
-      file1.append("DL="+Dl+"\n\n")
-      file1.append("Along Z-axis for shear wave""\n")
-      file1.append("Average of Gamma="+yav1+"\n\n")
-      file1.append("Average of square Gamma="+y+"\n\n")
-      file1.append("Square of average Gamma="+yav+"\n\n")
-      file1.append("Ds="+Ds+"\n\n")
-      file1.append("Table of ultrasonic attenuation:-""\n\n")
-      file1.append("Compound name="+comp+"\n\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("frequency""\t""alpha(th)""\t""alpha(L)""\t""alpha(s)" "\n")
-      file1.append("----------------------------------------------------------""\n")
+        file1.write(""+str(tth[i])+"\t"+""+str(v1[i])+"\t"+""+str(v2[i])+"\t"+""+str(v3[i])+"\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Value of relaxation time="+str(to)+"\n\n")
+      file1.write("Value of long.relax.time="+str(tl)+"\n\n")
+      file1.write("Value of shearrelax.time="+str(ts)+"\n\n")
+      file1.write("Value of Gruneisen contants are as follow:-""\n")
+      file1.write("Along Z-axis for lonitudinal wave""\n")
+      file1.write("Average of Gamma="+str(xav1)+"\n\n")
+      file1.write("Average of square Gamma="+str(x)+"\n\n")
+      file1.write("Square of average Gamma="+str(xav)+"\n\n")
+      file1.write("DL="+str(Dl)+"\n\n")
+      file1.write("Along Z-axis for shear wave""\n")
+      file1.write("Average of Gamma="+str(yav1)+"\n\n")
+      file1.write("Average of square Gamma="+str(y)+"\n\n")
+      file1.write("Square of average Gamma="+str(yav)+"\n\n")
+      file1.write("Ds="+str(Ds)+"\n\n")
+      file1.write("Table of ultrasonic attenuation:-""\n\n")
+      file1.write("Compound name="+comp+"\n\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("frequency""\t""alpha(th)""\t""alpha(L)""\t""alpha(s)" "\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(m):
-        file1.append(""+f[j]+"\t"""+athw[j]+"\t"""+alw[j]+"\t"""+asw[j]+"\n")
-      file1.append("----------------------------------------------------------""\n")
+        file1.write(""+str(f[j])+"\t"""+str(athw[j])+"\t"""+str(alw[j])+"\t"""+str(asw[j])+"\n")
+      file1.write("----------------------------------------------------------""\n")
 
     elif J == 5:
       exit()

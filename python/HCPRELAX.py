@@ -22,34 +22,34 @@ def main():
   dd,Cv,Cva,Cvb,Eo,Eoa,Eob,ko,koa,kob = ([0.0 for x in range(15)] for i in range(10))  
   V,to = ([[0.0 for x in range(15)] for y in range(15)] for i in range(2))
 
-  a, a0 = input("Enter the value of a(basel plane distance) in 'a' 'a0' format= ").split()
+  a, a0 = (float(i) for i in (input("Enter the value of a(basel plane distance) in 'a' 'a0' format= ").split()))
 
   p = float(input("Enter the value of  c/a =  "))
 
   j = int(input("Enter the number of c33 data=  "))
   print("Enter the value of C33 =  ")
   for i in range(j):
-    C33[i], C33A[i] = input().split() 
+    C33[i], C33A[i] = (float(k) for k in (input().split()))
   
   print("enter the temperature= ")
   for i in range(j):
-    T[i] = input()
+    T[i] = (float(input()))
   
   print("enter the value of dd=")
   for i in range(j):
-    dd[i] = input()
+    dd[i] = (float(input()))
 
   print("enter the value of Cv= ")
   for i in range(j):
-    Cva[i], Cvb[i] = input().split() 
+    Cva[i], Cvb[i] = (float(k) for k in (input().split()))
 
   print("enter the value of Eo=")
   for i in range(j):
-    Eoa[i], Eob[i] = input().split()
+    Eoa[i], Eob[i] = (float(k) for k in (input().split()))
 
   print("enter the value of K=")
   for i in range(j):
-    koa[i], kob[i] = input().split()
+    koa[i], kob[i] = (float(k) for k in (input().split()))
 
   a=a*pow(10,a0)
   va=1.732*pow(a,3.0)*p/2.0
@@ -105,54 +105,54 @@ def main():
     print(" Enter 2 to see debye avg.velocity and relx.time using V1&V3 ""\n")
     print(" Enter 3 to Print all data""\n")
     print(" Enter 4 for EXIT""\n")
-    J = int(input(" What is your choice="))
+    J = int(input(" What is your choice= "))
 
     if J == 1:
       for i in range(j):
         print("Table of velocity for hcp compound-""\n\n")
         print("Compound name="+comp+"\n\n")
-        print("temperature="+T[i]+"\n")
+        print("temperature="+str(T[i])+"\n")
         print("----------------------------------------------------------""\n")
         print("theeta""\t\t""v1 " "\t\t"+"v2 " "\t\t"+"v3 " "\n")
         print("----------------------------------------------------------""\n")
         for ii in range(11):
-          print(""+tth[ii]+"\t"+v1[i][ii]+"\t"+v2[i][ii]+"\t"+v3[i][ii]+"\n")
+          print(""+str(tth[ii])+"\t"+str(v1[i][ii])+"\t"+str(v2[i][ii])+"\t"+str(v3[i][ii])+"\n")
         print("----------------------------------------------------------""\n")
 
     elif J == 2:     
       for i in range(j):
         print("Table of debye velocity and relax.time using V1&V3-""\n\n")
         print("Compound name="+comp+"\n\n")
-        print("temperature="+T[i]+"\n")
+        print("temperature="+str(T[i])+"\n")
         print("----------------------------------------------------------""\n")
         print("theeta""\t\t""V""\t\t""RELAX.TIME""\n")
         print("----------------------------------------------------------""\n")
         for ii in range(11):
-          print(""+tth[ii]+"\t\t"+V[i][ii]+"\t"+""+to[i][ii]+"\n")
+          print(""+str(tth[ii])+"\t\t"+str(V[i][ii])+"\t"+""+str(to[i][ii])+"\n")
         print("----------------------------------------------------------""\n")
 
     elif J == 3:
-      file1 = open("PRN", "w")
+      file1 = open("PRN", "a")
       for i in range(j):
-        file1.append("Table of velocity for hcp compound-""\n\n")
-        file1.append("Compound name="+comp+"\n\n")
-        file1.append("temperature="+T[i]+"\n")
-        file1.append("----------------------------------------------------------""\n")
-        file1.append("theeta""\t\t""v1 " "\t\t"+"v2 " "\t\t"+"v3 " "\n")
-        file1.append("----------------------------------------------------------""\n")
+        file1.write("Table of velocity for hcp compound-""\n\n")
+        file1.write("Compound name="+comp+"\n\n")
+        file1.write("temperature="+str(T[i])+"\n")
+        file1.write("----------------------------------------------------------""\n")
+        file1.write("theeta""\t\t""v1 " "\t\t"+"v2 " "\t\t"+"v3 " "\n")
+        file1.write("----------------------------------------------------------""\n")
         for ii in range(11):
-          file1.append(""+tth[ii]+"\t"+v1[i][ii]+"\t"+v2[i][ii]+"\t"+v3[i][ii]+"\n")
-        file1.append("----------------------------------------------------------""\n")
+          file1.write(""+str(tth[ii])+"\t"+str(v1[i][ii])+"\t"+str(v2[i][ii])+"\t"+str(v3[i][ii])+"\n")
+        file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-        file1.append("Table of debye velocity and relax.time using V1&V3-""\n\n")
-        file1.append("Compound name="+comp+"\n\n")
-        file1.append("temperature="+T[i]+"\n")
-        file1.append("----------------------------------------------------------""\n")
-        file1.append("theeta""\t\t""V""\t\t""RELAX.TIME""\n")
-        file1.append("----------------------------------------------------------""\n")
+        file1.write("Table of debye velocity and relax.time using V1&V3-""\n\n")
+        file1.write("Compound name="+comp+"\n\n")
+        file1.write("temperature="+str(T[i])+"\n")
+        file1.write("----------------------------------------------------------""\n")
+        file1.write("theeta""\t\t""V""\t\t""RELAX.TIME""\n")
+        file1.write("----------------------------------------------------------""\n")
         for ii in range(11):
-          file1.append(""+tth[ii]+"\t\t"+V[i][ii]+"\t"+to[i][ii]+"\n")
-        file1.append("----------------------------------------------------------""\n")
+          file1.write(""+str(tth[ii])+"\t\t"+str(V[i][ii])+"\t"+str(to[i][ii])+"\n")
+        file1.write("----------------------------------------------------------""\n")
 
     elif J == 4:
       exit()

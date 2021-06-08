@@ -29,37 +29,37 @@ def main():
   
   print("Enter the value of a(basel plane distance) in 'a' 'a0' format= ")
   for i in range(j):
-    a[i], a0[i] = input().split()
+    a[i], a0[i] = (float(k) for k in (input().split()))
   
   print("Enter the value of  c/a =  ")
   for i in range(j):
-    p[i] = input()
+    p[i] = (float(input()))
 
   print("Enter the value of C33 =  ")
   for i in range(j):
-    C33[i], C33A[i] = input().split() 
+    C33[i], C33A[i] = (float(k) for k in (input().split()))
 
   print("enter the temperature= ")
   for i in range(j):
-    T[i] = input()
+    T[i] = (float(input()))
 
   print("enter the value of Cv= ")
   for i in range(j):
-    Cva[i], Cvb[i] = input().split() 
+    Cva[i], Cvb[i] = (float(k) for k in (input().split())) 
 
   print("enter the value of Eo=")
   for i in range(j):
-    Eoa[i], Eob[i] = input().split()
+    Eoa[i], Eob[i] = (float(k) for k in (input().split()))
     
   print("enter the value of K=")
   for i in range(j):
-    koa[i], kob[i] = input().split()
+    koa[i], kob[i] = (float(k) for k in (input().split()))
   
-  jj = input("enter the number of frequency= ")
+  jj = int(input("enter the number of frequency= "))
 
   print("enter the value of frequency in MHz=")
   for i in range(j):
-    F[i] = input()
+    F[i] = (float(input()))
     
   K = 1.0/1.414
   
@@ -181,35 +181,35 @@ def main():
       print("Temp""\t\t""a""\t\t""c/a ""\n")
       print("----------------------------------------------------------")
       for i in range(j):
-        print(""+T[i]+"\t"+a[i]+"\t"+""+p[i])
+        print(""+str(T[i])+"\t"+str(a[i])+"\t"+""+str(p[i]))
       print("----------------------------------------------------------")
       print(" This is table for second order elastic constant. ")
       print("----------------------------------------------------------")
       print("temp""\t""c11""\t\t""c12 " "\t\t"+"c13 " "\n")
       print("----------------------------------------------------------")
       for i in range(j):
-        print(""+T[i]+"\t"+c11[i]+"\t"+""+c12[i]+"\t"+""+c13[i])
+        print(""+str(T[i])+"\t"+str(c11[i])+"\t"+""+str(c12[i])+"\t"+""+str(c13[i]))
       print("----------------------------------------------------------")
       print("temp""c33""\t\t""c44 " "\t\t"+"c66 ")
       print("----------------------------------------------------------")
       for i in range(j):
-        print(""<<T[i]<<"\t"<<c33[i]<<"\t"<<""<<c44[i]<<"\t"<<""<<c66[i])
+        print(""+str(T[i])+"\t"+str(c33[i])+"\t"+""+str(c44[i])+"\t"+""+str(c66[i]))
       print("----------------------------------------------------------")
       print(" This is table for third order elastic constant. ")
       print("----------------------------------------------------------")
       print("temp""c111""\t\t""c112 " "\t\t"+"c113 " "\t\t"+"C123 ")
       print("----------------------------------------------------------")
       for i in range(j):
-        print(""+T[i]+"\t"+c111[i]+"\t"+c112[i]+"\t"+c113[i]+"\t"+c123[i])
+        print(""+str(T[i])+"\t"+str(c111[i])+"\t"+str(c112[i])+"\t"+str(c113[i])+"\t"+str(c123[i]))
       print("----------------------------------------------------------")
       print("temp""c133""\t\t""c344 " "\t\t"+"c144 ")
       print("----------------------------------------------------------")
       for i in range(j):
-        print(""+T[i]+"\t"+c133[i]+"\t"+c344[i]+"\t"+c144[i])
+        print(""+str(T[i])+"\t"+str(c133[i])+"\t"+str(c344[i])+"\t"+str(c144[i]))
       print("----------------------------------------------------------")
       print("temp""c155""\t\t""c222 " "\t\t""c333 ")
       print("----------------------------------------------------------")
-      print(""+T[i]+"\t"+c155[i]+"\t"+c222[i]+"\t"+c333[i])
+      print(""+str(T[i])+"\t"+str(c155[i])+"\t"+str(c222[i])+"\t"+str(c333[i]))
       print("----------------------------------------------------------")
     
     elif J == '2':
@@ -218,7 +218,7 @@ def main():
       print("temp""\t""density""\t""Cv""\t""E0""\t""K""\n")
       print("----------------------------------------------------------""\n")
       for i in range(j):
-        print(""+T[i]+"\t"+dd[i]+"\t"+Cv[i]+"\t"+Eo[i]+"\t"+ko[i])
+        print(""+str(T[i])+"\t"+str(dd[i])+"\t"+str(Cv[i])+"\t"+str(Eo[i])+"\t"+str(ko[i]))
       print("----------------------------------------------------------")
     
     elif J == '3':
@@ -227,7 +227,7 @@ def main():
       print("Temp.""\t\t""Vl""\t\t""Vs")
       print("----------------------------------------------------------")
       for i in range(j):
-        print(""+T[i]+"\t"+""<<Vl[i]+"\t"+""+Vs[i])
+        print(""+str(T[i])+"\t"+""str(Vl[i])+"\t"+""+str(Vs[i]))
       print("----------------------------------------------------------")
       print(" This is table for debye avg.velocity and relax. time. ")
       print("----------------------------------------------------------")
@@ -235,7 +235,7 @@ def main():
       print("Temp.""\t\t""V""\t\t""Relax. time")
       print("----------------------------------------------------------")
       for i in range(j):
-        print(""+T[i]+"\t"+""+V[i]+"\t"+""+to[i]+"\n")
+        print(""+str(T[i])+"\t"+""+str(V[i])+"\t"+""+str(to[i])+"\n")
       print("----------------------------------------------------------")
     
     elif J == '4':
@@ -248,7 +248,7 @@ def main():
       print("Temp.""\t""xav1""\t\t""xav""\t""x""\t\t""DL""\n")
       print("----------------------------------------------------------""\n")
       for i in range(j):
-        print(""+T[i]+"\t"+xav1[i]+"\t"+xav[i]+"\t"+x[i]+"\t"+Dl[i]+"\n")
+        print(""+str(T[i])+"\t"+str(xav1[i])+"\t"+str(xav[i])+"\t"+str(x[i])+"\t"+str(Dl[i])+"\n")
       print("----------------------------------------------------------""\n")
       print("Along Z-axis for shear wave""\n")
       print("Average of Gamma =yav1""\n")
@@ -258,7 +258,7 @@ def main():
       print("Temp.""\t""yav1""\t\t""y""\t""Ds""\n")
       print("----------------------------------------------------------""\n")
       for i in range(j):
-        print(""+T[i]+"\t"+yav1[i]+"\t"+y[i]+"\t"+Ds[i]+"\n")
+        print(""+str(T[i])+"\t"+str(yav1[i])+"\t"+str(y[i])+"\t"+str(Ds[i])+"\n")
     
       print("----------------------------------------------------------""\n")
     
@@ -270,7 +270,7 @@ def main():
       print("temp""\t""alpha(th)""\t""alpha(L)""\t""alpha(s)" "\n")
       print("----------------------------------------------------------""\n")
       for i in range(j):
-        print(""+T[i]+"\t"+ath[i]+"\t"+al[i]+"\t"+as1[i]+"\n")
+        print(""+str(T[i])+"\t"+str(ath[i])+"\t"+str(al[i])+"\t"+str(as1[i])+"\n")
       print("----------------------------------------------------------""\n")
     
     elif J == '6':
@@ -280,106 +280,106 @@ def main():
         print("frequency""\t""alpha(th)""\t""alpha(L)""\t""alpha(s)" "\n")
         print("----------------------------------------------------------""\n")
         for ii in range(jj):
-          print(""+F[ii]+"\t"+alth[i][ii]+"\t"+all[i][ii]+"\t"+als[i][ii])
+          print(""+str(F[ii])+"\t"+str(alth[i][ii])+"\t"+str(all[i][ii])+"\t"+str(als[i][ii]))
         print("----------------------------------------------------------""\n")
     
     elif J == '7':
-      file1 = open("PRN", "w")
-      file1.append("Compound name="+comp+"\n\n")
-      file1.append("This result is for HCP compound="+comp+"\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Temp""\t\t""a""\t\t""c/a ""\n")
-      file1.append("----------------------------------------------------------""\n")
+      file1 = open("PRN", "a")
+      file1.write("Compound name="+comp+"\n\n")
+      file1.write("This result is for HCP compound="+comp+"\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Temp""\t\t""a""\t\t""c/a ""\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-        file1.append(""+T[i]+"\t"+a[i]+"\t"+""+p[i]+"\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append(" This is table for second order elastic constant. ""\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Temp""\t\t""c11""\t\t""c12 " "\t\t"+"c13 " "\n")
-      file1.append("----------------------------------------------------------""\n")
+        file1.write(""+str(T[i])+"\t"+str(a[i])+"\t"+""+str(p[i])+"\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write(" This is table for second order elastic constant. ""\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Temp""\t\t""c11""\t\t""c12 " "\t\t"+"c13 " "\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-        file1.append(""+T[i]+"\t"+c11[i]+"\t"+""+c12[i]+"\t"+""+c13[i]+"\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Temp""\t\t""c33""\t\t""c44 " "\t\t"+"c66 " "\n")
-      file1.append("----------------------------------------------------------""\n")
+        file1.write(""+str(T[i])+"\t"+str(c11[i])+"\t"+""+str(c12[i])+"\t"+""+str(c13[i])+"\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Temp""\t\t""c33""\t\t""c44 " "\t\t"+"c66 " "\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-        file1.append(""+T[i]+"\t"+c33[i]+"\t"+""+c44[i]+"\t"+""+c66[i]+"\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append(" This is table for third order elastic constant. ""\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Temp""\t\t""c111""\t\t""c112 " "\t\t""c113 " "\t\t""C123 " "\n")
-      file1.append("----------------------------------------------------------""\n")
+        file1.write(""+str(T[i])+"\t"+str(c33[i])+"\t"+""+str(c44[i])+"\t"+""+str(c66[i])+"\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write(" This is table for third order elastic constant. ""\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Temp""\t\t""c111""\t\t""c112 " "\t\t""c113 " "\t\t""C123 " "\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-        file1.append(""+T[i]+"\t"+c111[i]+"\t"+c112[i]+"\t"+c113[i]+"\t"+c123[i]+"\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Temp""\t\t""c133""\t\t""c344 " "\t\t"+"c144 " "\n")
-      file1.append("----------------------------------------------------------""\n")
+        file1.write(""+str(T[i])+"\t"+str(c111[i])+"\t"+str(c112[i])+"\t"+str(c113[i])+"\t"+str(c123[i])+"\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Temp""\t\t""c133""\t\t""c344 " "\t\t"+"c144 " "\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-        file1.append(""+T[i]+"\t"+c133[i]+"\t"+c344[i]+"\t"+c144[i]+"\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Temp""\t\t""c155""\t\t""c222 " "\t\t""c333 " "\n")
-      file1.append("----------------------------------------------------------""\n")
+        file1.write(""+str(T[i])+"\t"+str(c133[i])+"\t"+str(c344[i])+"\t"+str(c144[i])+"\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Temp""\t\t""c155""\t\t""c222 " "\t\t""c333 " "\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-        file1.append(""+T[i]+"\t"+c155[i]+"\t"+c222[i]+"\t"+c333[i]+"\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("This is table for Cv,Eo,Density and thermal cond.""\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("temp""\t""density""\t""Cv""\t""E0""\t""K""\n")
-      file1.append("----------------------------------------------------------""\n")
+        file1.write(""+str(T[i])+"\t"+str(c155[i])+"\t"+str(c222[i])+"\t"+str(c333[i])+"\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("This is table for Cv,Eo,Density and thermal cond.""\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("temp""\t""density""\t""Cv""\t""E0""\t""K""\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-        file1.append(""+T[i]+"\t"+dd[i]+"\t"+Cv[i]+"\t"+Eo[i]+"\t"+ko[i]+"\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append(" This is table for velocity. ""\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Temp.""\t\t""Vl""\t\t""Vs" "\n")
-      file1.append("----------------------------------------------------------""\n")
+        file1.write(""+str(T[i])+"\t"+str(dd[i])+"\t"+str(Cv[i])+"\t"+str(Eo[i])+"\t"+str(ko[i])+"\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write(" This is table for velocity. ""\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Temp.""\t\t""Vl""\t\t""Vs" "\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-        file1.append(""+T[i]+"\t"+""+Vl[i]+"\t"+""+Vs[i]+"\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append(" This is table for debye avg.velocity and relax. time. ""\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Temp.""\t\t""V""\t\t""Relax. time" "\n")
-      file1.append("----------------------------------------------------------""\n")
+        file1.write(""+str(T[i])+"\t"+""+str(Vl[i])+"\t"+""+str(Vs[i])+"\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write(" This is table for debye avg.velocity and relax. time. ""\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Temp.""\t\t""V""\t\t""Relax. time" "\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-        file1.append(""+T[i]+"\t"+""+V[i]+"\t"+""+to[i]+"\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Value of Gruneisen contants are as follow:-""\n")
-      file1.append("Along Z-axis for lonitudinal wave""\n")
-      file1.append("Average of Gamma=xav1""\n")
-      file1.append("Average of square Gamma=x""\n")
-      file1.append("Square of average Gamma=xav""\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Temp.""\t""xav1""\t\t""xav""\t""x""\t\t""DL""\n")
-      file1.append("----------------------------------------------------------""\n")
+        file1.write(""+str(T[i])+"\t"+""+str(V[i])+"\t"+""+str(to[i])+"\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Value of Gruneisen contants are as follow:-""\n")
+      file1.write("Along Z-axis for lonitudinal wave""\n")
+      file1.write("Average of Gamma=xav1""\n")
+      file1.write("Average of square Gamma=x""\n")
+      file1.write("Square of average Gamma=xav""\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Temp.""\t""xav1""\t\t""xav""\t""x""\t\t""DL""\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-       file1.append(""+T[i]+"\t"+xav1[i]+"\t"+xav[i]+"\t"+x[i]+"\t"+Dl[i]+"\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Along Z-axis for shear wave""\n")
-      file1.append("Average of Gamma =yav1""\n")
-      file1.append("Average of square Gamma=y""\n")
-      file1.append("Square of average Gamma=yav""\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Temp.""\t""yav1""\t\t""y""\t""Ds""\n")
-      file1.append("----------------------------------------------------------""\n")
+       file1.write(""+str(T[i])+"\t"+str(xav1[i])+"\t"+str(xav[i])+"\t"+str(x[i])+"\t"+str(Dl[i])+"\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Along Z-axis for shear wave""\n")
+      file1.write("Average of Gamma =yav1""\n")
+      file1.write("Average of square Gamma=y""\n")
+      file1.write("Square of average Gamma=yav""\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Temp.""\t""yav1""\t\t""y""\t""Ds""\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-        file1.append(""+T[i]+"\t"+yav1[i]+"\t"+y[i]+"\t"+Ds[i]+"\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("Table of ultrasonic attenuation:-""\n\n")
-      file1.append("Compound name="+comp+"\n\n")
-      file1.append("----------------------------------------------------------""\n")
-      file1.append("temp""\t""alpha(th)""\t""alpha(L)""\t""alpha(s)" "\n")
-      file1.append("----------------------------------------------------------""\n")
+        file1.write(""+str(T[i])+"\t"+str(yav1[i])+"\t"+str(y[i])+"\t"+str(Ds[i])+"\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("Table of ultrasonic attenuation:-""\n\n")
+      file1.write("Compound name="+comp+"\n\n")
+      file1.write("----------------------------------------------------------""\n")
+      file1.write("temp""\t""alpha(th)""\t""alpha(L)""\t""alpha(s)" "\n")
+      file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-        file1.append(""+T[i]+"\t"+ath[i]+"\t"+al[i]+"\t"+as1[i]+"\n")   
-      file1.append("----------------------------------------------------------""\n")
+        file1.write(""+str(T[i])+"\t"+str(ath[i])+"\t"+str(al[i])+"\t"+str(as1[i])+"\n")   
+      file1.write("----------------------------------------------------------""\n")
       for i in range(j):
-        file1.append("At the temperature="+T[i]+"\n")
-        file1.append("----------------------------------------------------------""\n")
-        file1.append("frequency""\t""alpha(th)""\t""alpha(L)""\t""alpha(s)" "\n")
-        file1.append("----------------------------------------------------------""\n")
+        file1.write("At the temperature="+str(T[i])+"\n")
+        file1.write("----------------------------------------------------------""\n")
+        file1.write("frequency""\t""alpha(th)""\t""alpha(L)""\t""alpha(s)" "\n")
+        file1.write("----------------------------------------------------------""\n")
         for ii in range(jj):
-          file1.append(""+F[ii]+"\t"+alth[ii]+"\t"+all[ii]+"\t"+als[ii]+"\n")
-          file1.append("----------------------------------------------------------""\n")
+          file1.write(""+str(F[ii])+"\t"+str(alth[ii])+"\t"+str(all[ii])+"\t"+str(als[ii])+"\n")
+          file1.write("----------------------------------------------------------""\n")
     elif J == '8':
       exit()
     else:

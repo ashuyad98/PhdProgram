@@ -17,9 +17,9 @@ def main():
 
   print("\n"" Lenard Jones potential constants are as follows-""\n\n")
   print(" Compound name="+comp+"\n\n")
-  print(" Sigma="+si+"\n\n")
-  print(" apsilan (energy constant value)="+ap+"\n\n")
-  print(" b="+b12+"\n")
+  print(" Sigma="+str(si)+"\n\n")
+  print(" apsilan (energy constant value)="+str(ap)+"\n\n")
+  print(" b="+str(b12)+"\n")
 
 
 
