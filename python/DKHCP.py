@@ -137,8 +137,7 @@ def main():
     y9[i]=-(1.0/1.414)*(pow(AC[i],0.5)/(A[i]+C[i]))*(1+y7a[i])
     y10[i]=(1.0/1.414)*(pow(AC[i],0.5)/(A[i]+C[i]))*(1+y7a[i])
     y[i]=(y1[i]*y1[i]+y2[i]*y2[i]+y3[i]*y3[i]+y4[i]*y4[i]+y5[i]*y5[i]+y6[i]*y6[i]+y7[i]*y7[i]+y8[i]*y8[i]+y9[i]*y9[i]+y10[i]*y10[i])/16.0
-    yav1[i]=(y1[i]+y2[i]+y3[i]+y4[i]+y5[i]+y6[i]+y7[i]+y8[i]+y9[i]+
-    y10[i])/16.0
+    yav1[i]=(y1[i]+y2[i]+y3[i]+y4[i]+y5[i]+y6[i]+y7[i]+y8[i]+y9[i]+y10[i])/16.0
     yav[i]=pow(yav1[i],2.0)
     
     #calculation of attenuation
